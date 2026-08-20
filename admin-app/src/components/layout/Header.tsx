@@ -1,0 +1,5 @@
+import { Bell, Search } from 'lucide-react';
+
+export function Header({ title }: { title: string }) {
+  return <header className="flex min-h-16 items-center justify-between gap-4 border-b border-slate-200 bg-white px-6"><div><p className="text-xs text-slate-400">Administration / {title}</p><p className="font-semibold text-slate-900">{title}</p></div><div className="flex items-center gap-4"><div className="relative hidden w-64 md:block"><Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" /><input className="w-full rounded-lg border border-slate-200 bg-slate-50 py-2 pl-9 pr-3 text-sm" placeholder="Search platform..." /></div><button aria-label="Notifications" className="relative rounded-lg p-2 text-slate-500 hover:bg-slate-100"><Bell className="h-5 w-5" /><span className="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-indigo-600" /></button><div className="grid h-8 w-8 place-items-center rounded-full bg-indigo-100 text-xs font-semibold text-indigo-700">AU</div></div></header>;
+}
